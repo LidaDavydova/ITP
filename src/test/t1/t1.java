@@ -3,19 +3,20 @@ import java.util.*;
 
 public class t1 {
     public static void main(String[] args) {
-//
-//        Iterator<String> iter = list.iterator();
-//        while (iter.hasNext()) {
-//            System.out.println(iter.next());
-//        }
+        Box<Integer, List<String>> a = new Box<Integer, List<String>>(1, List.of("fd", "wew"));
+        System.out.println(a.getObject());
     }
 }
 
 
-abstract class Mammal {
-    abstract public int noLegs();
-}
-
-abstract class Lion extends Mammal {
-    public int noLegs() { return 4; };
+class Box<T, K> {
+    private T type1;
+    private K type2;
+    public Box(T t, K t2) {
+        this.type1 = t;
+        this.type2 = t2;
+    }
+    public String getObject() {
+        return type1.toString() + type2.toString();
+    }
 }
