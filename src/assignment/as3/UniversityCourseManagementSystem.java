@@ -12,12 +12,10 @@ import java.util.List;
  *  @author LidaDavydova
  *  @version 1.0
  */
-public final class UniversityCourseManagementSystem {
+public class UniversityCourseManagementSystem {
     /**
      * This private constructor did not allow to create instance of UniversityCourseManagementSystem
      */
-    private UniversityCourseManagementSystem() {
-    }
     private static List<Course> allCourses = new ArrayList<>();
     private static List<Student> allStudents = new ArrayList<>();
     private static List<Professor> allProfessors = new ArrayList<>();

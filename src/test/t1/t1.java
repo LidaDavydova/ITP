@@ -1,22 +1,32 @@
 package test.t1;
-import java.util.*;
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-public class t1 {
+public class t1 extends Thread {
+    static JFrame jFrame = getFrame();
     public static void main(String[] args) {
-        Box<Integer, List<String>> a = new Box<Integer, List<String>>(1, List.of("fd", "wew"));
-        System.out.println(a.getObject());
-    }
-}
+        JPanel jPanel = new JPanel();
+        jFrame.add(jPanel);
+        JButton jButton = new JButton("submit");
+        jPanel.add(jButton);
+        jButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
 
-
-class Box<T, K> {
-    private T type1;
-    private K type2;
-    public Box(T t, K t2) {
-        this.type1 = t;
-        this.type2 = t2;
+            }
+        });
     }
-    public String getObject() {
-        return type1.toString() + type2.toString();
+
+    public static JFrame getFrame() {
+        JFrame jFrame = new JFrame() {};
+        jFrame.setVisible(true);
+        jFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        Toolkit toolkit = Toolkit.getDefaultToolkit();
+        Dimension dimension = toolkit.getScreenSize();
+        jFrame.setBounds(dimension.width/2-250, 200,500,200);
+        jFrame.setTitle("App");
+        return jFrame;
     }
 }
