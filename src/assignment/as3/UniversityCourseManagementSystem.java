@@ -7,7 +7,8 @@ import java.util.List;
 
 /**
  * This is a UniversityCourseManagementSystem final class that has main, fillInitialData,
- * mainTeach, mainEnroll, mainDrop, rightCommand, isAlpha methods.
+ * mainTeach, mainEnroll,10
+1 3 2 5 4 6 7 9 8 10 mainDrop, rightCommand, isAlpha methods.
  * main works with scanned lines, fillInitialData fills initial data
  *  @author LidaDavydova
  *  @version 1.0
