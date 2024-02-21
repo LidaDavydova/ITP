@@ -9,6 +9,7 @@ public class Home5Ex1 {
         Scanner in = new Scanner(System.in);
         int n = in.nextInt();
         int k = in.nextInt();
+
         Trie trie = new Trie();
         ArrayList<String> dict = new ArrayList<>(n);
         for (int i=0; i<n; i++) {
@@ -25,6 +26,32 @@ public class Home5Ex1 {
             }
         }
     }
+//
+//    public static List<String> splitText(Set<String> dictionary, String text) {
+//        List<String> result = new ArrayList<>();
+//        int i = 0;
+//
+//        while (i < text.length()) {
+//            int maxMatchLength = 0;
+//            String maxMatchWord = null;
+//
+//            for (String word : dictionary) {
+//                if (text.startsWith(word, i) && word.length() > maxMatchLength) {
+//                    maxMatchLength = word.length();
+//                    maxMatchWord = word;
+//                }
+//            }
+//
+//            if (maxMatchWord != null) {
+//                result.add(maxMatchWord);
+//                i += maxMatchLength;
+//            } else {
+//                i++;
+//            }
+//        }
+//
+//        return result;
+//    }
 }
 
 class Node2 {
